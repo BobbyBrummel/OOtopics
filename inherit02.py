@@ -37,6 +37,20 @@ class Vehicle(object):
         if self.sold_on is None:
             return 0.0  # Not yet sold
         return self.base_sale_price - (.10 * self.miles)
+        
+    def repair_cost(self): 
+    """ set up local variables cost_of_repair, date_of_repair 
+    ... make these variables of type list so that each time  
+    ... a repair occurs, the fact can be retained. """
+    cost_of_repair = []
+	date_of_repair = []
+	repair = input("Enter the cost amount for the repair:") 
+	cost_of_repair.append(repair)
+	date = input("Enter the date the repair occured:")
+	date_of_repair.append(date)
+	return cost_of_repair
+	return date_of_repair
+
 
     @abstractmethod
     def vehicle_type(self):
